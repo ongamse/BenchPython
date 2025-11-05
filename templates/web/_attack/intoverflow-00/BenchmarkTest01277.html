@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest01277</title>
+</head>
+<body>
+<form action="/benchmark/intoverflow-00/BenchmarkTest01277" method="POST" id="FormBenchmarkTest01277" autocomplete="off">
+ <div><label>Select your habits and edit the parameter [name,value]:</label></div><br>
+	<div><input type="checkbox" name="BenchmarkTest01277" value="x" checked >Reading. [BenchmarkTest01277, x]</div>
+	<div><input type="checkbox" name="BenchmarkTest01277" value="Movies" >Movies. [BenchmarkTest01277, Movies]</div>
+	<div><input type="checkbox" name="BenchmarkTest01277" value="Writing" >Writing. [BenchmarkTest01277, Writing]</div>
+	<div><input type="checkbox" name="BenchmarkTest01277" value="Singing" >Singing. [BenchmarkTest01277, Singing]</div>
+	<div><label>Parameter foo, value:</label><input type="text" id="foo" name="foo" value="bar" ></div><br>
+	<div><input type="submit" value="Submit" ></div>
+ </form>
+ 
+<br>
+<form action="/benchmark/intoverflow-00/BenchmarkTest01277" method="POST" id="FormBenchmarkTest01277-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest01277<br>Value:</label>
+	<input type="text" id="BenchmarkTest01277" name="BenchmarkTest01277" value="aaaaaaaaaaaaaaaaaaa&#x21;" ><label> ← True Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" /></div>
+</form>
+</body>
+</html>

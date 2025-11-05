@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest01242</title>
+</head>
+<body>
+<form action="/benchmark/securecookie-00/BenchmarkTest01242" method="POST" id="FormBenchmarkTest01242" autocomplete="off">
+ <div><label>Select your habits and edit the parameter [name,value]:</label></div><br>
+	<div><input type="checkbox" name="BenchmarkTest01242" value="whatever" checked >Reading. [BenchmarkTest01242, whatever]</div>
+	<div><input type="checkbox" name="BenchmarkTest01242" value="Movies" >Movies. [BenchmarkTest01242, Movies]</div>
+	<div><input type="checkbox" name="BenchmarkTest01242" value="Writing" >Writing. [BenchmarkTest01242, Writing]</div>
+	<div><input type="checkbox" name="BenchmarkTest01242" value="Singing" >Singing. [BenchmarkTest01242, Singing]</div>
+	<div><label>Parameter foo, value:</label><input type="text" id="foo" name="foo" value="bar" ></div><br>
+	<div><input type="submit" value="Submit" ></div>
+ </form>
+ 
+<br>
+<form action="/benchmark/securecookie-00/BenchmarkTest01242" method="POST" id="FormBenchmarkTest01242-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest01242<br>Value:</label>
+	<input type="text" id="BenchmarkTest01242" name="BenchmarkTest01242" value="does_not_matter" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" /></div>
+</form>
+</body>
+</html>

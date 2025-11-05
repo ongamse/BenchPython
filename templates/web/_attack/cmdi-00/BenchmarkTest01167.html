@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest01167</title>
+</head>
+<body>
+<form action="/benchmark/cmdi-00/BenchmarkTest01167" method="POST" id="FormBenchmarkTest01167" autocomplete="off">
+ <div><label>Select your habits and edit the parameter [name,value]:</label></div><br>
+	<div><input type="checkbox" name="BenchmarkTest01167" value="ECHOOO" checked >Reading. [BenchmarkTest01167, ECHOOO]</div>
+	<div><input type="checkbox" name="BenchmarkTest01167" value="Movies" >Movies. [BenchmarkTest01167, Movies]</div>
+	<div><input type="checkbox" name="BenchmarkTest01167" value="Writing" >Writing. [BenchmarkTest01167, Writing]</div>
+	<div><input type="checkbox" name="BenchmarkTest01167" value="Singing" >Singing. [BenchmarkTest01167, Singing]</div>
+	<div><label>Parameter foo, value:</label><input type="text" id="foo" name="foo" value="bar" ></div><br>
+	<div><input type="submit" value="Submit" ></div>
+ </form>
+ 
+<br>
+<form action="/benchmark/cmdi-00/BenchmarkTest01167" method="POST" id="FormBenchmarkTest01167-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest01167<br>Value:</label>
+	<input type="text" id="BenchmarkTest01167" name="BenchmarkTest01167" value="ECHOOO &amp;&amp; ls" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" /></div>
+</form>
+</body>
+</html>

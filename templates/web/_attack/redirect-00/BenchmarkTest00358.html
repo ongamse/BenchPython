@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00358</title>
+</head>
+<body>
+<form action="/benchmark/redirect-00/BenchmarkTest00358" method="POST" id="FormBenchmarkTest00358" autocomplete="off">
+    <p>Please make your car selection, and edit the value to be sent [value]:</p>
+	<select name="BenchmarkTest00358" multiple>
+	    <option value="http&#x3a;&#x2f;&#x2f;localhost&#x3a;5000&#x2f;" selected>Audi. [http&#x3a;&#x2f;&#x2f;localhost&#x3a;5000&#x2f;]</option>
+	    <option value="Ford">Ford. [Ford]</option>
+	    <option value="Opel">Opel. [Opel]</option>
+        <option value="Subaru">Subaru. [Subaru]</option>
+	</select><br><br>
+    <input type="submit" value="Submit" >
+</form>
+<br>
+<form action="/benchmark/redirect-00/BenchmarkTest00358" method="POST" id="FormBenchmarkTest00358-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest00358<br>Value:</label>
+	<input type="text" id="BenchmarkTest00358" name="BenchmarkTest00358" value="http&#x3a;&#x2f;&#x2f;localhost&#x3a;5000&#x2f;redirected" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>

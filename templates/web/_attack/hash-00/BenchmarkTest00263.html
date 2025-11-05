@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00263</title>
+</head>
+<body>
+<form action="/benchmark/hash-00/BenchmarkTest00263" method="POST" id="FormBenchmarkTest00263" autocomplete="off">
+    <p>Please make your car selection, and edit the value to be sent [value]:</p>
+	<select name="BenchmarkTest00263" multiple>
+	    <option value="someSecret" selected>Audi. [someSecret]</option>
+	    <option value="Ford">Ford. [Ford]</option>
+	    <option value="Opel">Opel. [Opel]</option>
+        <option value="Subaru">Subaru. [Subaru]</option>
+	</select><br><br>
+    <input type="submit" value="Submit" >
+</form>
+<br>
+<form action="/benchmark/hash-00/BenchmarkTest00263" method="POST" id="FormBenchmarkTest00263-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest00263<br>Value:</label>
+	<input type="text" id="BenchmarkTest00263" name="BenchmarkTest00263" value="anotherSecret" ><label> ← True Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00673</title>
+</head>
+<body>
+<form action="/benchmark/weakrand-02/BenchmarkTest00673" method="POST" id="FormBenchmarkTest00673" autocomplete="off">
+	<div><label>Please explain your answer:</label></div>
+	<br>
+	<div><textarea rows="4" cols="50" id="BenchmarkTest00673Area" name="BenchmarkTest00673Area"></textarea></div>
+	<div><label>Any additional note for the reviewer:</label></div>
+	<div><input type="text" id="answer" name="answer" ></div>
+	<br>
+	<div><label>An AJAX request will be sent with a header named <input type="text" id="BenchmarkTest00673" name="BenchmarkTest00673" value="whatever" class="safe" >
+	and value of BenchmarkTest00673.</label></div>
+	<div><input type="button" id="login-btn" value="Login" method="submitHeaderNamesForm" testcase="BenchmarkTest00673" ></div>
+</form>
+<div id="ajax-form-msg1"><pre><code class="prettyprint" id="code"></code></pre></div>
+<br>
+<form action="/benchmark/weakrand-02/BenchmarkTest00673" method="POST" id="FormBenchmarkTest00673-Unsafe" autocomplete="off">
+	<div><label>Generate new AJAX request with a header value of BenchmarkTest00673 and name:</label>
+	<input type="text" id="BenchmarkTest00673" name="BenchmarkTest00673" value="does_not_matter" class="attk" ><label> ← False Positive</label></div>
+	<div><input type="button" value="Send Request" id="login-btn-atk" method="submitHeaderNamesForm" testcase="BenchmarkTest00673-Unsafe" ></div>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00899</title>
+</head>
+<body>
+<form action="/benchmark/xss-00/BenchmarkTest00899" method="GET" id="FormBenchmarkTest00899" autocomplete="off">
+	<div><label>Please enter your details:</label></div>
+	<br>
+	<div><label>Username:</label></div>
+	<div><input type="text" id="username" name="username" ></div>
+	<div><label>Password:</label></div>
+	<div><input type="text" id="password" name="password" value="" ></div>
+	<div>&nbsp;</div>
+	<div><label>Parameter: BenchmarkTest00899 <br>Value:</label>
+	<input type="text" id="BenchmarkTest00899" name="BenchmarkTest00899" value="SafeText" ></div>
+	<br>
+	<div><input type="submit" value="Login" ></div>
+</form>
+<br>
+<form action="/benchmark/xss-00/BenchmarkTest00899" method="GET" id="FormBenchmarkTest00899-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest00899<br>Value:</label>
+	<input type="text" id="BenchmarkTest00899" name="BenchmarkTest00899" value="danger&#x21;&lt;script&gt;alert&#x28;&#x27;xss&#x27;&#x29;&lt;&#x2f;script&gt;" ><label> ← True Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>

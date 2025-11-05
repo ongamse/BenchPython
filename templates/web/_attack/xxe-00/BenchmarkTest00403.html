@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00403</title>
+</head>
+<body>
+<form action="/benchmark/xxe-00/BenchmarkTest00403" method="POST" id="FormBenchmarkTest00403" autocomplete="off">
+	<div><label>Please explain your answer:</label></div>
+	<br>
+	<div><textarea rows="4" cols="50" id="BenchmarkTest00403Area" name="BenchmarkTest00403Area"></textarea></div>
+	<div><label>Any additional note for the reviewer:</label></div>
+	<div><input type="text" id="answer" name="answer" ></div>
+	<br>
+	<div><label>An AJAX request will be sent with a parameter value 'BenchmarkTest00403' and name:</label>
+	<input type="text" id="BenchmarkTest00403" name="BenchmarkTest00403" value="&lt;&#x3f;xml version&#x3d;&quot;1.0&quot; encoding&#x3d;&quot;UTF-8&quot; standalone&#x3d;&quot;yes&quot;&#x3f;&gt;&#xa;&#x9;&lt;test xmlns&#x3a;xsi&#x3d;&quot;http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema-instance&quot;&#xa;&#x9;xsi&#x3a;noNamespaceSchemaLocation&#x3d;&quot;test.xsd&quot;&gt;Hello from Venus&lt;&#x2f;test&gt;" class="safe" ></div>
+	<div><input type="button" id="login-btn" value="Login" method="submitParameterNamesForm" testcase="BenchmarkTest00403" ></div>
+</form>
+<div id="ajax-form-msg1"><pre><code class="prettyprint" id="code"></code></pre></div>
+<br>
+<form action="/benchmark/xxe-00/BenchmarkTest00403" method="POST" id="FormBenchmarkTest00403-Unsafe" autocomplete="off">
+	<div><label>Generate new AJAX request and parameter value 'BenchmarkTest00403' and name:</label>
+	<input type="text" id="BenchmarkTest00403" name="BenchmarkTest00403" value="&lt;&#x3f;xml version&#x3d;&quot;1.0&quot; encoding&#x3d;&quot;UTF-8&quot; standalone&#x3d;&quot;yes&quot;&#x3f;&gt;&#xa;&#x9;&lt;&#x21;DOCTYPE test &#x5b;&lt;&#x21;ENTITY xxetest1 SYSTEM &quot;.&#x2f;helpers&#x2f;resources&#x2f;xxe.txt&quot;&gt; &#x5d;&gt; &#xa;&#x9;&lt;test xmlns&#x3a;xsi&#x3d;&quot;http&#x3a;&#x2f;&#x2f;www.w3.org&#x2f;2001&#x2f;XMLSchema-instance&quot;&#xa;&#x9;xsi&#x3a;noNamespaceSchemaLocation&#x3d;&quot;test.xsd&quot;&gt;&amp;xxetest1&#x3b;&lt;&#x2f;test&gt;" class="attk" ><label> ← False Positive</label></div>
+	<div><input type="button" value="Send Request" id="login-btn-atk" method="submitParameterNamesForm" testcase="BenchmarkTest00403-Unsafe" ></div>
+</form>
+</body>
+</html>

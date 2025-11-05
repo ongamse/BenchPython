@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest01082</title>
+</head>
+<body>
+<form action="/benchmark/codeinj-00/BenchmarkTest01082" method="GET" id="FormBenchmarkTest01082" autocomplete="off">
+	<div><label>Please enter your details:</label></div>
+	<br>
+	<div><label>Username:</label></div>
+	<div><input type="text" id="username" name="username" ></div>
+	<div><label>Password:</label></div>
+	<div><input type="text" id="password" name="password" value="" ></div>
+	<div>&nbsp;</div>
+	<div><label>Parameter: BenchmarkTest01082 <br>Value:</label>
+	<input type="text" id="BenchmarkTest01082" name="BenchmarkTest01082" value="&#x27;RESPONSE &#x2b;&#x3d; &#x5c;&#x27;ECHOOO&#x5c;&#x27;&#x27;" ></div>
+	<br>
+	<div><input type="submit" value="Login" ></div>
+</form>
+<br>
+<form action="/benchmark/codeinj-00/BenchmarkTest01082" method="GET" id="FormBenchmarkTest01082-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest01082<br>Value:</label>
+	<input type="text" id="BenchmarkTest01082" name="BenchmarkTest01082" value="&#x27;return &#x5c;&#x27;ABCDEFG&#x5c;&#x27;&#x27;&gt;" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>

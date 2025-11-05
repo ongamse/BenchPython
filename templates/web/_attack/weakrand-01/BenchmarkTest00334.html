@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00334</title>
+</head>
+<body>
+<form action="/benchmark/weakrand-01/BenchmarkTest00334" method="POST" id="FormBenchmarkTest00334" autocomplete="off">
+	<div><label>Please enter your details:</label></div>
+	<br>
+	<div><label>Email:</label></div>
+	<div><input type="text" id="email" name="email" ></div>
+	<div><label>Password:</label></div>
+	<div><input type="text" id="password" name="password" value="" ></div>
+	<div>&nbsp;</div>
+	<div><label>Parameter: BenchmarkTest00334 <br>Value:</label>
+	<input type="text" id="BenchmarkTest00334" name="BenchmarkTest00334" value="whatever" ></div>
+	<br>
+	<div><input type="submit" value="Login" ></div>
+</form>
+<br>
+<form action="/benchmark/weakrand-01/BenchmarkTest00334" method="POST" id="FormBenchmarkTest00334-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest00334<br>Value:</label>
+	<input type="text" id="BenchmarkTest00334" name="BenchmarkTest00334" value="does_not_matter" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>

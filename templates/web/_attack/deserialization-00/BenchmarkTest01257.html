@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest01257</title>
+</head>
+<body>
+<form action="/benchmark/deserialization-00/BenchmarkTest01257" method="POST" id="FormBenchmarkTest01257" autocomplete="off">
+ <div><label>Select your habits and edit the parameter [name,value]:</label></div><br>
+	<div><input type="checkbox" name="BenchmarkTest01257" value="gASVNwAAAAAAAACMCF9fbWFpbl9flIwOc2FmZV90b19waWNrbGWUk5QpgZR9lCiMAWGUjANmb2-UjAFilEtjdWIu" checked >Reading. [BenchmarkTest01257, gASVNwAAAAAAAACMCF9fbWFpbl9flIwOc2FmZV90b19waWNrbGWUk5QpgZR9lCiMAWGUjANmb2-UjAFilEtjdWIu]</div>
+	<div><input type="checkbox" name="BenchmarkTest01257" value="Movies" >Movies. [BenchmarkTest01257, Movies]</div>
+	<div><input type="checkbox" name="BenchmarkTest01257" value="Writing" >Writing. [BenchmarkTest01257, Writing]</div>
+	<div><input type="checkbox" name="BenchmarkTest01257" value="Singing" >Singing. [BenchmarkTest01257, Singing]</div>
+	<div><label>Parameter foo, value:</label><input type="text" id="foo" name="foo" value="bar" ></div><br>
+	<div><input type="submit" value="Submit" ></div>
+ </form>
+ 
+<br>
+<form action="/benchmark/deserialization-00/BenchmarkTest01257" method="POST" id="FormBenchmarkTest01257-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest01257<br>Value:</label>
+	<input type="text" id="BenchmarkTest01257" name="BenchmarkTest01257" value="gASVUgAAAAAAAACMCGJ1aWx0aW5zlIwEZXhlY5STlIw2aGVscGVycy51dGlscy5zaGFyZWRzdHIgPSAidGhvdSBoYXN0IGJlZW4gdW5waWNrbGVkdGgilIWUUpQu" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" /></div>
+</form>
+</body>
+</html>

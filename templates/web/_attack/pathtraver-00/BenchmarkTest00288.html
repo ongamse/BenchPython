@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <script src="/benchmark/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/benchmark/js/js.cookie.js"></script>
+  <script src="/benchmark/js/testsuiteutils.js"></script>
+  <link rel="icon" type="image/png" href="/benchmark/favicon.ico">
+  <title>BenchmarkTest00288</title>
+</head>
+<body>
+<form action="/benchmark/pathtraver-00/BenchmarkTest00288" method="POST" id="FormBenchmarkTest00288" autocomplete="off">
+    <p>Please make your car selection, and edit the value to be sent [value]:</p>
+	<select name="BenchmarkTest00288" multiple>
+	    <option value="FileName" selected>Audi. [FileName]</option>
+	    <option value="Ford">Ford. [Ford]</option>
+	    <option value="Opel">Opel. [Opel]</option>
+        <option value="Subaru">Subaru. [Subaru]</option>
+	</select><br><br>
+    <input type="submit" value="Submit" >
+</form>
+<br>
+<form action="/benchmark/pathtraver-00/BenchmarkTest00288" method="POST" id="FormBenchmarkTest00288-Unsafe" autocomplete="off">
+	<div><label>Parameter: BenchmarkTest00288<br>Value:</label>
+	<input type="text" id="BenchmarkTest00288" name="BenchmarkTest00288" value="..&#x2f;conf&#x2f;tomcat-users.xml" ><label> ← False Positive</label></div>
+	<br>
+	<div><input type="submit" value="Test Attack" ></div>
+</form>
+</body>
+</html>
