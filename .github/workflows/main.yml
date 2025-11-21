@@ -10,26 +10,40 @@ on:
 jobs:
   NextGen-Static-Analysis:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        shell: bash
+
     steps:
-    - uses: actions/checkout@v4
-    - name: Download ShiftLeft CLI
-      run: |
-        curl https://cdn.shiftleft.io/download/sl > ${GITHUB_WORKSPACE}/sl && chmod a+rx ${GITHUB_WORKSPACE}/sl
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Make runBenchmark.sh executable (if needed)
-      run: chmod +x ./runBenchmark.sh # Grants execute permission to the script
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
-    - name: Run the benchmark script
-      run: ./runBenchmark.sh
-    
-    - name: preZero Static Analysis
-      run: |
-       pip install -r requirements.txt
+      - name: Download ShiftLeft CLI
+        run: |
+          curl -sSL https://cdn.shiftleft.io/download/sl -o "${GITHUB_WORKSPACE}/sl"
+          chmod +x "${GITHUB_WORKSPACE}/sl"
 
-        ${GITHUB_WORKSPACE}/sl --version
-        ${GITHUB_WORKSPACE}/sl analyze --verbose --wait \
-          --app QwietAI-python-bench \
-          --tag branch=${{ github.head_ref }} \
+      - name: Make runBenchmark.sh executable
+        run: chmod +x ./runBenchmark.sh
 
-      env:
-        SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
+      - name: Run the benchmark script
+        # Force bash so "source" works even if script shebang is /bin/sh
+        run: bash ./runBenchmark.sh
+
+      - name: preZero Static Analysis
+        env:
+          SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
+        run: |
+          # Install dependencies (if needed outside the benchmark venv)
+          pip install -r requirements.txt
+
+          "${GITHUB_WORKSPACE}/sl" --version
+          "${GITHUB_WORKSPACE}/sl" analyze --verbose --wait \
+            --app QwietAI-python-bench \
+            --tag branch=${{ github.head_ref }}
