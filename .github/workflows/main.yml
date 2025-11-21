@@ -29,11 +29,11 @@ jobs:
           curl -sSL https://cdn.shiftleft.io/download/sl -o "${GITHUB_WORKSPACE}/sl"
           chmod +x "${GITHUB_WORKSPACE}/sl"
 
-      - name: Make runBenchmark.sh executable
-        run: chmod +x ./runBenchmark.sh
+      #- name: Make runBenchmark.sh executable
+      #  run: chmod +x ./runBenchmark.sh
 
-      - name: Run the benchmark script
-        run: bash ./runBenchmark.sh
+      #- name: Run the benchmark script
+       # run: bash ./runBenchmark.sh
 
       - name: preZero Static Analysis
         env:
@@ -44,5 +44,5 @@ jobs:
 
           "${GITHUB_WORKSPACE}/sl" --version
           "${GITHUB_WORKSPACE}/sl" analyze --verbose --wait \
-            --app QwietAI-python-bench \
+            --app QwietAI-python-bench --pythonsrc . \
             --tag branch=${{ github.head_ref }}
