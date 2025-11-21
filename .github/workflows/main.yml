@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - name: Download ShiftLeft CLI
         run: |
@@ -33,14 +33,13 @@ jobs:
         run: chmod +x ./runBenchmark.sh
 
       - name: Run the benchmark script
-        # Force bash so "source" works even if script shebang is /bin/sh
         run: bash ./runBenchmark.sh
 
       - name: preZero Static Analysis
         env:
           SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         run: |
-          # Install dependencies (if needed outside the benchmark venv)
+          # If you still need Python deps outside the benchmark venv:
           pip install -r requirements.txt
 
           "${GITHUB_WORKSPACE}/sl" --version
