@@ -40,6 +40,7 @@ jobs:
           SHIFTLEFT_ACCESS_TOKEN: ${{ secrets.SHIFTLEFT_ACCESS_TOKEN }}
         run: |
           # If you still need Python deps outside the benchmark venv:
+          python3 -m pip install --upgrade pip
           pip install -r requirements.txt
 
           "${GITHUB_WORKSPACE}/sl" --version
