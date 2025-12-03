@@ -46,4 +46,4 @@ jobs:
           "${GITHUB_WORKSPACE}/sl" --version
           "${GITHUB_WORKSPACE}/sl" analyze --verbose --wait \
             --app QwietAI-pythononly-bench \
-            --tag branch=${{ github.head_ref }} --pythonsrc .
+            --tag branch=${{ github.head_ref }} --pythonsrc testcode/.
